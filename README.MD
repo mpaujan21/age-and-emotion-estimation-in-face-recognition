@@ -2,13 +2,11 @@
 
 In this project, I build a deep learning implementation to estimate the age and emotion of detected faces. This can be applied to an image or live detection from a webcam. However, I can't do a report on live detection due to limited computing resources (the video runs very slow).
 
-[TOC]
-
 ## 1. Face Detection
 
 For the face detection, I use 2 methods: OpenCV & Deep Learning (MTCNN). Then I compare it and use the better ones, this is how it look:
 
-![](images\1.JPG)
+<img src="images\1.JPG" style="zoom: 67%;" />
 
 So the MTCNN (*Multi-Task Cascaded Convolutional Neural Network*) is more accurate and robust to face with different directions. The MTCNN architecture is complex to implement, but there is a third party MTCNN project from this [Github Repo](https://github.com/ipazc/mtcnn) so everyone can use the model just by installing the package. Also, you can read more about the architecture on this [paper](https://kpzhang93.github.io/MTCNN_face_detection_alignment/).
 
@@ -20,13 +18,13 @@ So the MTCNN (*Multi-Task Cascaded Convolutional Neural Network*) is more accura
 
 The [data](https://www.kaggle.com/ashishpatel26/facial-expression-recognitionferchallenge) have around 30k images with 6 different emotions. Also, it's already cropped and aligned so no need to detect face before for model training. However, the 6 emotions don't have an equal distribution so I only select *Happy, Sad, and Neutral* (3,4,6) emotion. This is how the distributions and the images look like:
 
-<img src="images\2.JPG" style="zoom: 67%;" />
+<img src="images\2.JPG" style="zoom: 50%;" />
 
-<img src="images\3.JPG" style="zoom:80%;" />
+<img src="images\3.JPG" style="zoom:67%;" />
 
 ### CNN Model
 
-<img src="images/4.JPG" style="zoom: 80%;" />
+<img src="images/4.JPG" style="zoom: 67%;" />
 
 I use this convolutional blocks 3 times before it goes through Flatten and Dense layers. Also, in model fitting, I use callbacks namely EarlyStopping and ReduceLRonPlateau to reduce overfitting and get adaptable learning rate. The model was trained on 100 epochs and stop at Epoch 58 because the metrics (accuracy) didn't improve anymore.
 
@@ -36,7 +34,7 @@ The model have a pretty good accuracy both on training and validation set at aro
 
 <img src="images\5.JPG" style="zoom:80%;" />
 
-<img src="images\6.JPG" style="zoom: 80%;" />
+<img src="images\6.JPG" style="zoom:67%;" />
 
 
 
@@ -48,7 +46,7 @@ The [data](https://www.kaggle.com/abhikjha/appa-real-face-cropped) have a fairly
 
 <img src="images\7.JPG" style="zoom:80%;" />
 
-<img src="images\8.JPG" style="zoom:67%;" />
+<img src="images\8.JPG" style="zoom:50%;" />
 
 ### CNN Model (Transfer Learning)
 
@@ -70,7 +68,7 @@ It's pretty simple to combine the model. First, I used the face detector and ext
 
 - **Mo Salah (Liverpool player), Real age: 28**
 
-<img src="images\10.JPG" style="zoom: 50%;" />
+<img src="images\10.JPG" style="zoom: 33%;" />
 
 
 
@@ -82,25 +80,25 @@ It's pretty simple to combine the model. First, I used the face detector and ext
 
 - **Cristiano Ronaldo, Real age: 31**
 
-  <img src="images\12.JPG" style="zoom: 50%;" />
+  <img src="images\12.JPG" style="zoom: 33%;" />
 
   
 
 - **Lionel Messi, Real age: 29**
 
-  <img src="images\13.JPG" style="zoom: 67%;" />
+  <img src="images\13.JPG" style="zoom: 50%;" />
 
   
 
 - **Taylor Swift, Real age: 31**
 
-<img src="images\14.JPG" style="zoom: 67%;" />
+<img src="images\14.JPG" style="zoom: 50%;" />
 
 
 
 - **Twenty One Pilots (Joshua Dun, Tyler Joseph), Real age: 29, 29**
 
-<img src="images\15.JPG" style="zoom: 67%;" />
+<img src="images\15.JPG" style="zoom: 50%;" />
 
 
 
