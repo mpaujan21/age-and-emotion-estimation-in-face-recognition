@@ -18,7 +18,7 @@ So the MTCNN (*Multi-Task Cascaded Convolutional Neural Network*) is more accura
 
 The [data](https://www.kaggle.com/ashishpatel26/facial-expression-recognitionferchallenge) have around 30k images with 6 different emotions. Also, it's already cropped and aligned so no need to detect face before for model training. However, the 6 emotions don't have an equal distribution so I only select *Happy, Sad, and Neutral* (3,4,6) emotion. This is how the distributions and the images look like:
 
-<img src="images\2.JPG" style="max-width:67%;" />
+<img src="images\2.JPG" width="200" height="400" />
 
 <img src="images\3.JPG" style="zoom:67%;" />
 
