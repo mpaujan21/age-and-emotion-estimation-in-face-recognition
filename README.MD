@@ -6,7 +6,7 @@ In this project, I build a deep learning implementation to estimate the age and 
 
 For the face detection, I use 2 methods: OpenCV & Deep Learning (MTCNN). Then I compare it and use the better ones, this is how it look:
 
-<img src="images\1.JPG" style="zoom: 67%;" />
+<img src="images\1.JPG" />
 
 So the MTCNN (*Multi-Task Cascaded Convolutional Neural Network*) is more accurate and robust to face with different directions. The MTCNN architecture is complex to implement, but there is a third party MTCNN project from this [Github Repo](https://github.com/ipazc/mtcnn) so everyone can use the model just by installing the package. Also, you can read more about the architecture on this [paper](https://kpzhang93.github.io/MTCNN_face_detection_alignment/).
 
@@ -18,7 +18,7 @@ So the MTCNN (*Multi-Task Cascaded Convolutional Neural Network*) is more accura
 
 The [data](https://www.kaggle.com/ashishpatel26/facial-expression-recognitionferchallenge) have around 30k images with 6 different emotions. Also, it's already cropped and aligned so no need to detect face before for model training. However, the 6 emotions don't have an equal distribution so I only select *Happy, Sad, and Neutral* (3,4,6) emotion. This is how the distributions and the images look like:
 
-<img src="images\2.JPG" style="zoom:33%;" />
+<img src="images\2.JPG" style="max-width:67%;" />
 
 <img src="images\3.JPG" style="zoom:67%;" />
 
