@@ -4,6 +4,8 @@ In this project, I build a deep learning implementation to estimate the age and 
 
 ## 1. Face Detection
 
+[Inspired by this blog post](https://machinelearningmastery.com/how-to-perform-face-detection-with-classical-and-deep-learning-methods-in-python-with-keras/)
+
 For the face detection, I use 2 methods: OpenCV & Deep Learning (MTCNN). Then I compare it and use the better ones, this is how it look:
 
 <p align="center">
@@ -17,6 +19,8 @@ So the MTCNN (*Multi-Task Cascaded Convolutional Neural Network*) is more accura
 
 
 ## 2. Emotion Detection
+
+[Inspired by this notebook](https://www.kaggle.com/gauravsharma99/facial-emotion-recognition)
 
 ### Dataset
 
@@ -57,6 +61,8 @@ The model have a pretty good accuracy both on training and validation set at aro
 
 
 ## 3. Age Estimation
+
+[Inspired by this notebook](https://www.kaggle.com/vitaliymalcev/detecting-age-by-photo-with-keras)
 
 ### Dataset
 
